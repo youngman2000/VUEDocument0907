@@ -11,7 +11,7 @@ import sider from "@/views/layout/sider.vue";
     <a-layout>
       <sider></sider>
       <a-layout>
-        <a-layout-content :style="{padding:'24px',margin:0,minHeight:'200px'}">
+        <a-layout-content :style="{padding:'24px',margin:0,minHeight:'200px',background: '#fff'}">
           <RouterView />
         </a-layout-content>
       </a-layout>
