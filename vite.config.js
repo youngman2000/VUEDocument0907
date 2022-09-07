@@ -9,7 +9,7 @@ import { AntDesignVueResolver, ElementPlusResolver } from "unplugin-vue-componen
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "https://youngman2000.github.io/VUEDocument0907",
+  base: "/VUEDocument0907/",
   plugins: [
     vue(),
     AutoImport({
