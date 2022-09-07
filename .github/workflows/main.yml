@@ -30,8 +30,8 @@ jobs:
         run: echo Hello, world!
 
       - id: build-vue
-        uses:xRealNeon/VuePagesAction@1.0.1
+        uses: xRealNeon/VuePagesAction@1.0.1
         with:
-          username:'drioou'
-          reponname:'dist'
-          token:${{ secrets.GITHUB_TOKEN }}
+          username: 'drioou'
+          reponame: 'dist'
+          token: ${{ secrets.GITHUB_TOKEN }}
