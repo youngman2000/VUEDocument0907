@@ -1,3 +1,11 @@
+<!--
+ * @Author: youngsuper 1406422800@qq.com
+ * @Date: 2022-09-07 15:39:46
+ * @LastEditors: youngsuper 1406422800@qq.com
+ * @LastEditTime: 2022-09-07 16:37:03
+ * @FilePath: /VUEDocument0907/src/components/HelloWorld.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%A
+-->
 <script setup>
 defineProps({
   msg: {
@@ -9,7 +17,7 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <a-button type="primary">this is a button</a-button>
+    <a-button type="primary">this is a BUTTON</a-button>
     <a-switch></a-switch>
     <h1 class="green">{{ msg }}</h1>
     <h3>
