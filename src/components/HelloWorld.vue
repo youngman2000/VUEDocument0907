@@ -9,6 +9,8 @@ defineProps({
 
 <template>
   <div class="greetings">
+    <a-button type="primary">this is a button</a-button>
+    <a-switch></a-switch>
     <h1 class="green">{{ msg }}</h1>
     <h3>
       You’ve successfully created a project with
