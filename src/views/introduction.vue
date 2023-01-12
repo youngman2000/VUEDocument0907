@@ -13,19 +13,10 @@
     Vue(发音为/vju:/,类似view)是一款构建用户界面的的JavaScript框架。它基于HTML,CSS,JavaScript的标准构建，并提供了一套声明式的、组件化的编程思想，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue都可以胜任。
   </div>
   <p>下面是一个基本的示例：</p>
-  <div>
-    <pre>
-      <code>
-      import { createApp} from 'vue'
-      createApp{
-        data(){
-          return {
-            count:0 }
-          }
-      }
-      </code>
-    </pre>
-  </div>
+  <highlightjs :code="code1"></highlightjs>
+  <highlightjs :code="code2"></highlightjs>
+  <p>结果展示：</p>
+  <a-button>Count is: 4</a-button>
   <p>上面的示例展示了Vue的两个核心功能：</p>
   <ul>
     <li>
@@ -103,3 +94,26 @@
   <p>
     在学习阶段，你不必只固收一种风格。在接下来的文档中我们会为你提供一系列两种风格代码的参考，你可以随时通过左上角的API风格来做切换。</p>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      code1: `import {createApp} from vue
+
+createApp({
+   data(){
+      return{
+        count:0
+        }
+      }
+   }).mount('#app')
+`,
+      code2: `<div id="app">
+  <button @click="coutn++">
+    Count is :{{count}}
+  </button>
+</div>`
+    };
+  }
+};
+</script>
