@@ -33,5 +33,35 @@
       如果你不确定是否要开启某个功能，你可以直接按下回车键选择No。在项目被创建后，通过一下步骤安装依赖并启动开发服务器：</p>
     <p>你现在应该已经运行起来了你的第一个Vue项目！请注意，生成的项目中实例组件是使用组合式API和《script
       setup》编写，而非选项式API。下面是一些补充提示。</p>
+    <p>推荐使用IDE配置是Visual Studio Code + Volar 扩展 。如果使用其他编辑器，参考IDE支持章节。</p>
+    <p>更多工具细节，包括与后端框架整合，我们会在工具链指南进行讨论。</p>
+    <p>要了解构建工具Vite更多背后细节，请查看Vite文档 。</p>
+    <p>如果你使用Typescript,请阅读TypeScript使用指南。</p>
+    <p>当你准备将应用发布到生成环境时，请运行：</p>
+    <p>npm run build</p>
+    <p>
+      此命令会在./dist文件夹中为你的应用创建一个生成环境的构建版本。关于将应用上线生产环境的更多内容，请阅读生产环境部署指南。</p>
+    <el-divider />
+    <h4>不使用构建工具</h4>
+    <p>若不想经过构建流程就可以使用Vue，请直接复制下面的代码到一个HTML文件中，并在浏览器中打开它：</p>
+    <p>
+      <highlightjs
+        language="js"
+        :code="open">
+      </highlightjs>
+    </p>
   </div>
+
 </template>
+<script>
+export default {
+
+  setup() {
+    const open = `console.log('Hello World');`;
+    return {
+      open
+    };
+  }
+};
+
+</script>

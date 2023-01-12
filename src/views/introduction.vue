@@ -10,7 +10,7 @@
   <a-typography-title :level="3">简介</a-typography-title>
   <a-typography-title :level="4">什么是Vue?</a-typography-title>
   <div>
-    Vue是一款构建用户界面的的JavaScript框架。它基于HTML,CSS,JavaScript的标准构建，并提供了一套声明式的、组件化的编程思想，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue都可以胜任。
+    Vue(发音为/vju:/,类似view)是一款构建用户界面的的JavaScript框架。它基于HTML,CSS,JavaScript的标准构建，并提供了一套声明式的、组件化的编程思想，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue都可以胜任。
   </div>
   <p>下面是一个基本的示例：</p>
   <div>
