@@ -12,7 +12,28 @@
     <p>
       根据你的使用场景和个人偏好，在使用Vue时，你可以选择是否采用构建工具流程。
     </p>
-    <el-divider />
+    <h3>创建一个Vue应用</h3>
+    <a-card>
+      <h5>
+        <exclamation-circle-outlined :style="{color:'#3b9c71'}" />
+        前提条件
+      </h5>
+      <ul>
+        <li>熟悉命令行</li>
+        <li>已安装16.0或更高的版本的Node.js</li>
+      </ul>
+    </a-card>
+    <p></p>
+    <p>
+      在本节中，我们将介绍如何在本地搭建Vue单页应用。创建的应用将基于Vite的构建设置，并允许我们使用Vue的单文件组件（SFC）。</p>
+    <p>确保你安装了最新版本的Node.js,然后再命令行中运行以下命令（不要带上
+      <PreCode value=">"></PreCode>
+      符号）
+    </p>
+    <highlightjs :code="code.code1"></highlightjs>
+    <p>
+      这一指令将会安装并执行create-vue,它是Vue官方项目脚手架工具。你将会看到注入TypeScript和测试支持之类的可选功能提示：</p>
+    <a-divider />
     <h3>采用构建工具</h3>
     <p>
       构建工具让我能使用Vue单文件组件（SFC）。Vue官方的构建工具流程是基于Vite的，一个现代、轻量、极速的构建工具。
@@ -45,21 +66,23 @@
     <h4>不使用构建工具</h4>
     <p>若不想经过构建流程就可以使用Vue，请直接复制下面的代码到一个HTML文件中，并在浏览器中打开它：</p>
     <p>
-      <highlightjs
-        language="js"
-        :code="open">
-      </highlightjs>
+
     </p>
   </div>
 
 </template>
 <script>
+import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
+import { code } from "@/views/code/quickStart.js";
+
 export default {
+  components: {
+    ExclamationCircleOutlined
+  },
 
   setup() {
-    const open = `console.log('Hello World');`;
     return {
-      open
+      code
     };
   }
 };

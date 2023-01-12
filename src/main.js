@@ -16,9 +16,11 @@ import "highlight.js/styles/atom-one-dark.css";
 import "highlight.js/lib/common"; // side effect import will not be optimized out by webpack
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 
+import precode from "./components/precode.vue";
 
 const app = createApp(App);
 
 app.use(router).use(hljsVuePlugin);
+app.component("PreCode", precode);
 
 app.mount("#app");

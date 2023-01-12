@@ -13,8 +13,8 @@
     Vue(发音为/vju:/,类似view)是一款构建用户界面的的JavaScript框架。它基于HTML,CSS,JavaScript的标准构建，并提供了一套声明式的、组件化的编程思想，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue都可以胜任。
   </div>
   <p>下面是一个基本的示例：</p>
-  <highlightjs :code="code1"></highlightjs>
-  <highlightjs :code="code2"></highlightjs>
+  <highlightjs :code="code.code1"></highlightjs>
+  <highlightjs :code="code.code2"></highlightjs>
   <p>结果展示：</p>
   <a-button>Count is: 4</a-button>
   <p>上面的示例展示了Vue的两个核心功能：</p>
@@ -57,6 +57,7 @@
   <h3>单文件组件</h3>
   <p>在大多数启动了构建工具的Vue项目中，我们可以使用一种类似HTML格式的文件来书写Vue组件，它被称为单文件组件（也被称为*.vue文件，英文Single-file
     components,缩写为SFC）。顾名思义，Vue的单文件组件会将一个组件的逻辑（JavaScript），模板（HTML）和样式（CSS）封装在同一个文件里。下面我们将用单文件组件的格式重写上面的计数器示例：</p>
+  <highlightjs :code="code.code3"></highlightjs>
   <p>
     单文件组件是Vue的标志性功能。如果你的用例需要进行构建，我们推荐用它来编写Vue组件。你可以在后续相关章节里了解跟多关于单文件组件的用法和用途。但你暂时只需要知道Vue会帮你处理所有这些构建工具的配置就好。</p>
   <el-divider />
@@ -65,10 +66,17 @@
   <h4>选项式API（Options API）</h4>
   <p>
     使用选项式API，我们可以用包含多个选项的对象来描述组件的逻辑，例如data、methods和mounted。选项所定义的属性都会暴露在函数内部的this上，它会指向当前的组件实例。</p>
+  <highlightjs :code="code.code4"></highlightjs>
   <h4>组合式API（Composition API）</h4>
-  <p>通过组合式API，我们可以使用导入的API函数来描述组件的逻辑。在单文件组件中，组合式API通常会与《script setup》搭配使用。这个setup
-    attribute是一个标识，告诉Vue需要在编译时进行一些处理，让我们可以更简洁地使用组合式API。比如，《script
-    setup》中导入和顶层变量/函数都能够在模板中可以直接使用。 </p>
+  <p>通过组合式API，我们可以使用导入的API函数来描述组件的逻辑。在单文件组件中，组合式API通常会与
+    <PreCode value="<script setup>"></PreCode>
+    搭配使用。这个
+    <PreCode value="setup"></PreCode>
+    attribute是一个标识，告诉Vue需要在编译时进行一些处理，让我们可以更简洁地使用组合式API。比如，
+    <PreCode value="<script setup>"></PreCode>
+    中导入和顶层变量/函数都能够在模板中可以直接使用。
+  </p>
+  <highlightjs :code="code.code5"></highlightjs>
   <h4>该选哪一个？</h4>
   <p>
     两种风格都能够覆盖大部分的应用场景。他们只是同一个底层系统所提供的两套不同的接口。实际上，选项式API实在组合式API的基础上实现的！关于Vue的基础概率和知识在他们之间都是通用的。</p>
@@ -95,24 +103,14 @@
     在学习阶段，你不必只固收一种风格。在接下来的文档中我们会为你提供一系列两种风格代码的参考，你可以随时通过左上角的API风格来做切换。</p>
 </template>
 <script>
+import { code } from "@/views/code/introduction.js";
+import PreCode from "@/components/precode.vue";
+
 export default {
+  components: { PreCode },
   data() {
     return {
-      code1: `import {createApp} from vue
-
-createApp({
-   data(){
-      return{
-        count:0
-        }
-      }
-   }).mount('#app')
-`,
-      code2: `<div id="app">
-  <button @click="coutn++">
-    Count is :{{count}}
-  </button>
-</div>`
+      code
     };
   }
 };
